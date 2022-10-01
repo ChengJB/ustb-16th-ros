@@ -25,6 +25,6 @@
   <node name="joint_state_publisher" pkg="joint_state_publisher" type="joint_state_publisher" />
   <node name="robot_state_publisher" pkg="robot_state_publisher" type="robot_state_publisher"/>
   
-  <include file="$(find mbot_navigation)/launch/nav.launch"/>
+  <include file="$(find ucar_navigation)/launch/nav.launch"/>
 
 </launch>
