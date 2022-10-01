@@ -1,0 +1,19 @@
+<launch>
+    <!-- to start up the car -->
+
+    <!-- broadcast static tfs -->
+	<include file="$(find ucar_bringup)/launch/static_tf.launch" />
+
+    <!-- start the base mcu -->
+    <!-- this will make car respond to cmd_vel command and start imu -->
+    <include file="$(find ucar_controller)/launch/base_driver.launch" />
+
+    <!-- start lidar -->
+    <include file="$(find ydlidar)/launch/ydlidar.launch" />
+
+	<!-- start joystick controll -->
+	<include file="$(find teleop_twist_joy)/launch/teleop.launch" />
+
+    <!-- start usb_cam -->
+    <include file= "$(find usb_cam)/launch/usb_cam.launch" />
+</launch>
