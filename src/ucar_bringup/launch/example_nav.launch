@@ -10,14 +10,14 @@
     <!-- ##       SIMULATION                 ## -->
     <!-- ###################################### -->
 
-    <include file="$(find gazebo_pkg)/launch/empty_race_track.launch" />
+    <include file="$(find gazebo_pkg)/launch/example.launch" />
 
     <!-- ###################################### -->
     <!-- ##       NAVIGATION STACK           ## -->
     <!-- ###################################### -->
 
     <!-- start navigation stack -->
-    <!-- <include file="$(find ucar_navigation)/launch/nav.launch" /> -->
+    <include file="$(find ucar_navigation)/launch/nav.launch" />
 
     <!-- ###################################### -->
     <!-- ##       DECISION & LOGIC           ## -->

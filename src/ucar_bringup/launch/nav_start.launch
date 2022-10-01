@@ -4,30 +4,13 @@
     <!-- so that their logs can be separated from navigation nodes -->
 
 	<!-- command line flags -->
-	<arg name="if" default="true" />
-	<arg name="hb" default="true" />
-	<arg name="sk" default="false" />
-	<arg name="re" default="false" />
-	<arg name="tm" default="true" />
-	<arg name="gs" default="false" />
+    <!-- not used -->
 	
     <!-- ###################################### -->
-    <!-- ##       HARDWARE DRIVERS           ## -->
+    <!-- ##       SIMULATION                 ## -->
     <!-- ###################################### -->
 
-    <!-- broadcast static tfs -->
-    <include file="$(find ucar_bringup)/launch/static_tf.launch" />
-
-    <!-- start the base mcu -->
-    <!-- this will make car respond to cmd_vel command, also starts imu -->
-    <include file="$(find ucar_controller)/launch/base_driver.launch" />
-
-    <!-- start lidar -->
-    <!-- undistortion node will also be started -->
-    <include file="$(find ydlidar)/launch/ydlidar.launch" />
-
-    <!-- start usb_cam -->
-    <include file="$(find usb_cam)/launch/usb_cam.launch" />
+    <include file="$(find gazebo_pkg)/launch/empty_race_track.launch" />
 
     <!-- ###################################### -->
     <!-- ##       NAVIGATION STACK           ## -->
@@ -36,25 +19,10 @@
     <!-- start navigation stack -->
     <include file="$(find ucar_navigation)/launch/nav.launch" />
 
-	<!-- start that stupid line and circle thing -->
-	<!--include file="$(find lnc_nav)/launch/lnc_nav.launch"/-->
-    <!-- no I don't wanna work on that thing anymore -->
-
     <!-- ###################################### -->
     <!-- ##       DECISION & LOGIC           ## -->
     <!-- ###################################### -->
 
-    <!-- start commander node -->
-    <include file="$(find ucar_commander)/launch/ucar_commander.launch" >
-		<arg name="is_infer_room_type" value="$(arg if)" />
-		<arg name="is_hybrid_nav" value="$(arg hb)" />
-		<arg name="is_skip_room_d" value="$(arg sk)" />
-		<arg name="is_return_home" value="$(arg re)" />
-		<arg name="is_timed" value="$(arg tm)" />
-		<arg name="is_guess_room_type" value="$(arg gs)" />
-	</include>
-
-	<!-- start park point chooser -->
-	<!-- include file="$(find park_point_chooser)/launch/park_point_chooser.launch" /-->
+    <!-- not used -->
 
 </launch>
