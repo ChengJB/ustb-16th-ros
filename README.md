@@ -103,8 +103,8 @@ source devel/setup.bash
 
 在 `src/ucar_navigation/config/' 下还有很多重要的参数, 比如代价地图相关的, 请尝试调试它们
 ## 问题补充
-![a225b8fe5489562ae4254e48559eb63](https://user-images.githubusercontent.com/79188319/193418602-495d1cfa-ec87-4088-9280-3f1852c99447.jpg)
+![image](https://user-images.githubusercontent.com/79188319/193418829-fa0789df-b112-45e7-8b53-59ae4c0f7d07.png)
 如果遇到以上gazebo卡住的界面，请把群里的 models.zip 文件解压后放到根目录下 .gazebo 里面，如下图所示
-![bbb4e0e07720029838db3fd1a0cdc29](https://user-images.githubusercontent.com/79188319/193418738-ba1bf0b1-68fa-492f-8658-9979d8231687.jpg)
+![image](https://user-images.githubusercontent.com/79188319/193418848-d91b9936-a7ed-4080-a358-ae48064b01a2.png)
 （注：只要一个models文件夹即可，不要多个models文件夹嵌套）
 
