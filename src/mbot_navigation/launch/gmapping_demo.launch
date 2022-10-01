@@ -1,0 +1,5 @@
+<launch>
+
+    <include file="$(find mbot_navigation)/launch/gmapping.launch"/>
+
+</launch>
