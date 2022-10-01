@@ -1,5 +1,0 @@
-<launch>
-
-    <include file="$(find ucar_navigation)/launch/gmapping.launch"/>
-
-</launch>

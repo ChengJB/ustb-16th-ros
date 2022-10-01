@@ -19,6 +19,9 @@
     <!-- start navigation stack -->
     <!-- <include file="$(find ucar_navigation)/launch/nav.launch" /> -->
 
+    <!-- start mappting -->
+    <include file="$(find ucar_navigation)/launch/gmapping.launch" />
+
     <!-- ###################################### -->
     <!-- ##       DECISION & LOGIC           ## -->
     <!-- ###################################### -->
