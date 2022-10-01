@@ -102,3 +102,6 @@ source devel/setup.bash
 建图的也是同理, 这里使用了gmapping, 或许尝试将其换成hector或者cartographer会得到更好的结果
 
 在 `src/ucar_navigation/config/' 下还有很多重要的参数, 比如代价地图相关的, 请尝试调试它们
+## 问题补充
+![a225b8fe5489562ae4254e48559eb63](https://user-images.githubusercontent.com/79188319/193418602-495d1cfa-ec87-4088-9280-3f1852c99447.jpg)
+
