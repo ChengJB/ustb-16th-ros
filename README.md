@@ -106,5 +106,6 @@ source devel/setup.bash
 ![image](https://user-images.githubusercontent.com/79188319/193418829-fa0789df-b112-45e7-8b53-59ae4c0f7d07.png)
 如果遇到以上gazebo卡住的界面，请把群里的 models.zip 文件解压后放到根目录下 .gazebo 里面，如下图所示
 ![image](https://user-images.githubusercontent.com/79188319/193418848-d91b9936-a7ed-4080-a358-ae48064b01a2.png)
+
 （注：只要一个models文件夹即可，不要多个models文件夹嵌套）
 
