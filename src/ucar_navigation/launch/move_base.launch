@@ -9,7 +9,7 @@
     <rosparam file="$(find ucar_navigation)/config/global_costmap_params.yaml" command="load" />
 
     <rosparam file="$(find ucar_navigation)/config/move_base_params.yaml" command="load" />
-    <rosparam file="$(find ucar_navigation)/config/dwa_local_planner_params.yaml" command="load" />
+    <rosparam file="$(find ucar_navigation)/config/teb_local_planner_params.yaml" command="load" />
   </node>
   
 </launch>
