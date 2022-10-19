@@ -1,7 +1,7 @@
 <launch>
 
   <node pkg="move_base" type="move_base" respawn="false" name="move_base" output="screen" clear_params="true">
-    <param name="base_local_planner" value="dwa_local_planner/DWAPlannerROS" />
+    <param name="base_local_planner" value="teb_local_planner/TebLocalPlannerROS" />
 
     <rosparam file="$(find ucar_navigation)/config/costmap_common_params.yaml" command="load" ns="global_costmap" />
     <rosparam file="$(find ucar_navigation)/config/costmap_common_params.yaml" command="load" ns="local_costmap" />
