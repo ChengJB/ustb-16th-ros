@@ -3,24 +3,24 @@ TebLocalPlannerROS:
   ## ----- Robot Configuration Parameters -----
   ## acc_lim_x (double, default: 0.5)
   ## Maximum translational acceleration of the robot in meters/sec^2
-  acc_lim_x: 1.0 #
+  acc_lim_x: 0.5 #
 
   ## acc_lim_theta (double, default: 0.5)
   ## Maximum angular acceleration of the robot in radians/sec^2
-  acc_lim_theta: 2.50 #
+  acc_lim_theta: 0.50 #
 
   ## max_vel_x (double, default: 0.4)
   ## Maximum translational velocity of the robot in meters/sec
-  max_vel_x: 1.5 #
+  max_vel_x: 0.4 #
 
   ## max_vel_x_backwards (double, default: 0.2)
   ## Maximum absolute translational velocity of the robot while driving backwards in meters/sec.
   ##See optimization parameter weight_kinematics_forward_drive
-  max_vel_x_backwards: 1.0 #
+  max_vel_x_backwards: 0.2 #
 
   ## max_vel_theta (double, default: 0.3)
   ## Maximum angular velocity of the robot in radians/sec
-  max_vel_theta: 2.98 #
+  max_vel_theta: 0.3 #
 
   ## ***** The following parameters are relevant only for carlike robots: *****
   ## min_turning_radius (double, default: 0.0)
@@ -42,11 +42,11 @@ TebLocalPlannerROS:
 
   ## acc_lim_y (double, default: 0.5)
   ## Maximum strafing acceleration of the robot
-  acc_lim_y: 1.0 #
+  acc_lim_y: 0.5 #
 
   ## max_vel_y (double, default: 0.0)
   ## Maximum strafing velocity of the robot (should be zero for non-holonomic robots!)
-  max_vel_y: 0.9 #
+  max_vel_y: 0.5 #
 
   ## ***** The following parameters are relevant for the footprint model used for optimization (see Tutorial Obstacle Avoidance and Robot Footprint Model). New in version 0.3 *****
   ## footprint_model/type (string, default: "point")
@@ -142,7 +142,7 @@ TebLocalPlannerROS:
   ## max_global_plan_lookahead_dist (double, default: 3.0)
   ## Specify the maximum length (cumulative Euclidean distances) of the subset of the global plan taken into account for optimization.
   ## The actual length is than determined by the logical conjunction of the local costmap size and this maximum bound. Set to zero or negative in order to deactivate this limitation.
-  max_global_plan_lookahead_dist: 2.6 #
+  max_global_plan_lookahead_dist: 0.5 #
 
   ## force_reinit_new_goal_dist (double, default: 1.0)
   ## Reinitialize the trajectory if a previous goal is updated with a separation of more than the specified value in meters (skip hot-starting)
@@ -150,7 +150,7 @@ TebLocalPlannerROS:
 
   ## feasibility_check_no_poses (int, default: 4)
   ## Specify up to which pose on the predicted plan the feasibility should be checked each sampling interval.
-  feasibility_check_no_poses: 0 #
+  feasibility_check_no_poses: 4 #
 
   ## publish_feedback (bool, default: false)
   ## Publish planner feedback containing the full trajectory and a list of active obstacles (should be enabled only for evaluation or debugging).
