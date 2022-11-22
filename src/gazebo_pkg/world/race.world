@@ -766,10 +766,10 @@
       <static>1</static>
     </model>
     <state world_name='default'>
-      <sim_time>899 884000000</sim_time>
-      <real_time>315 484443992</real_time>
-      <wall_time>1669082766 362784514</wall_time>
-      <iterations>306993</iterations>
+      <sim_time>1066 300000000</sim_time>
+      <real_time>166 839675713</real_time>
+      <wall_time>1669085320 751724972</wall_time>
+      <iterations>166416</iterations>
       <model name='17th_ifly_scale1.25'>
         <pose>2.15063 -2.17324 0 0 -0 0</pose>
         <scale>1 1 1</scale>
@@ -865,43 +865,33 @@
         </link>
       </model>
       <model name='aruco_marker_0'>
-        <pose>2.16256 -6.63424 0.206931 -1.8e-05 0 0</pose>
+        <pose>2.16256 -6.63425 0.206932 1.8e-05 -0 0</pose>
         <scale>1 2.59854 2.75914</scale>
         <link name='link'>
-          <pose>2.16256 -6.63424 0.206931 -1.8e-05 0 0</pose>
+          <pose>2.16256 -6.63425 0.206932 1.8e-05 -0 0</pose>
           <velocity>0 0 0 0 -0 0</velocity>
-          <acceleration>-0.000511 1.95092 -7.54678 3.12385 -0.003607 -0.001166</acceleration>
-          <wrench>-1e-06 0.001951 -0.007547 0 -0 0</wrench>
+          <acceleration>-0.000511 -1.95106 -7.54662 -3.12319 -0.003606 0.001168</acceleration>
+          <wrench>-1e-06 -0.001951 -0.007547 0 -0 0</wrench>
         </link>
       </model>
       <model name='aruco_marker_1'>
-        <pose>2.1642 -7.28097 0.211632 -1.8e-05 -0 -0</pose>
+        <pose>2.1642 -7.28097 0.211635 5e-06 -3e-06 0</pose>
         <scale>1 2.55033 2.8218</scale>
         <link name='link'>
-          <pose>2.1642 -7.28097 0.211632 -1.8e-05 -0 -0</pose>
+          <pose>2.1642 -7.28097 0.211635 5e-06 -3e-06 0</pose>
           <velocity>0 0 0 0 -0 0</velocity>
-          <acceleration>-0.00055 2.05998 -7.33164 2.9221 -0.003704 -0.001209</acceleration>
-          <wrench>-1e-06 0.00206 -0.007332 0 -0 0</wrench>
+          <acceleration>0.002893 7.31098 7.19329 3.13444 0.012463 0.001396</acceleration>
+          <wrench>3e-06 0.007311 0.007193 0 -0 0</wrench>
         </link>
       </model>
       <model name='aruco_marker_2'>
-        <pose>2.16931 -7.90528 0.210566 1.7e-05 -1e-06 2e-06</pose>
+        <pose>2.16931 -7.90527 0.210569 -4e-06 -0 2e-06</pose>
         <scale>1 2.7408 2.80759</scale>
         <link name='link'>
-          <pose>2.16931 -7.90528 0.210566 1.7e-05 -1e-06 2e-06</pose>
+          <pose>2.16931 -7.90527 0.210569 -4e-06 -0 2e-06</pose>
           <velocity>0 0 0 0 -0 0</velocity>
-          <acceleration>0.000463 -1.85708 -7.73646 2.55261 0.003234 -0.00104</acceleration>
-          <wrench>0 -0.001857 -0.007736 0 -0 0</wrench>
-        </link>
-      </model>
-      <model name='end_plane'>
-        <pose>1.18604 -1.2563 0.001 0 -0 0</pose>
-        <scale>1 1 1</scale>
-        <link name='link'>
-          <pose>1.18604 -1.2563 0.001 0 -0 0</pose>
-          <velocity>0 0 0 0 -0 0</velocity>
-          <acceleration>0 0 0 0 -0 0</acceleration>
-          <wrench>0 0 0 0 -0 0</wrench>
+          <acceleration>0.003078 -7.43948 7.81167 -2.35087 0.013542 -0.000995</acceleration>
+          <wrench>3e-06 -0.007439 0.007812 0 -0 0</wrench>
         </link>
       </model>
       <model name='ground_plane'>
@@ -909,6 +899,26 @@
         <scale>1 1 1</scale>
         <link name='link'>
           <pose>0 0 0 0 -0 0</pose>
+          <velocity>0 0 0 0 -0 0</velocity>
+          <acceleration>0 0 0 0 -0 0</acceleration>
+          <wrench>0 0 0 0 -0 0</wrench>
+        </link>
+      </model>
+      <model name='race_end'>
+        <pose>0.56 -1.25 0.0001 0 -0 1.5707</pose>
+        <scale>1 1 1</scale>
+        <link name='link'>
+          <pose>0.56 -1.25 0.0001 0 -0 1.5707</pose>
+          <velocity>0 0 0 0 -0 0</velocity>
+          <acceleration>0 0 0 0 -0 0</acceleration>
+          <wrench>0 0 0 0 -0 0</wrench>
+        </link>
+      </model>
+      <model name='race_end_0'>
+        <pose>2.30994 -7.2811 0.0001 0 -0 0</pose>
+        <scale>1 1 1</scale>
+        <link name='link'>
+          <pose>2.30994 -7.2811 0.0001 0 -0 0</pose>
           <velocity>0 0 0 0 -0 0</velocity>
           <acceleration>0 0 0 0 -0 0</acceleration>
           <wrench>0 0 0 0 -0 0</wrench>
@@ -930,7 +940,7 @@
     </state>
     <gui fullscreen='0'>
       <camera name='user_camera'>
-        <pose>4.14903 -5.57961 8.52283 0 1.38579 -2.95098</pose>
+        <pose>-2.82931 -2.55153 8.59532 -0 1.0778 0.005816</pose>
         <view_controller>orbit</view_controller>
         <projection_type>perspective</projection_type>
       </camera>
@@ -983,55 +993,6 @@
         <kinematic>0</kinematic>
       </link>
       <pose>-0.002543 0.643377 0 0 -0 0</pose>
-    </model>
-    <model name='end_plane'>
-      <static>1</static>
-      <link name='link'>
-        <collision name='collision'>
-          <geometry>
-            <plane>
-              <normal>0 0 1</normal>
-              <size>0.6 0.6</size>
-            </plane>
-          </geometry>
-          <surface>
-            <friction>
-              <ode>
-                <mu>100</mu>
-                <mu2>50</mu2>
-              </ode>
-              <torsional>
-                <ode/>
-              </torsional>
-            </friction>
-            <contact>
-              <ode/>
-            </contact>
-            <bounce/>
-          </surface>
-          <max_contacts>10</max_contacts>
-        </collision>
-        <visual name='visual'>
-          <cast_shadows>0</cast_shadows>
-          <geometry>
-            <plane>
-              <normal>0 0 1</normal>
-              <size>0.6 0.6</size>
-            </plane>
-          </geometry>
-          <material>
-            <script>
-              <uri>model://end_plane/materials/scripts</uri>
-              <uri>model://end_plane/materials/textures/</uri>
-              <name>EndPlane/Image</name>
-            </script>
-          </material>
-        </visual>
-        <self_collide>0</self_collide>
-        <enable_wind>0</enable_wind>
-        <kinematic>0</kinematic>
-      </link>
-      <pose>1.18604 -1.2263 0 0 -0 0</pose>
     </model>
     <model name='aruco_marker_0'>
       <link name='link'>
@@ -1224,6 +1185,104 @@
         <kinematic>0</kinematic>
       </link>
       <pose>1.03692 -7.3804 0 0 -0 0</pose>
+    </model>
+    <model name='race_end'>
+      <static>1</static>
+      <link name='link'>
+        <collision name='collision'>
+          <geometry>
+            <plane>
+              <normal>0 0 1</normal>
+              <size>0.6 1.8</size>
+            </plane>
+          </geometry>
+          <surface>
+            <friction>
+              <ode>
+                <mu>100</mu>
+                <mu2>50</mu2>
+              </ode>
+              <torsional>
+                <ode/>
+              </torsional>
+            </friction>
+            <contact>
+              <ode/>
+            </contact>
+            <bounce/>
+          </surface>
+          <max_contacts>10</max_contacts>
+        </collision>
+        <visual name='visual'>
+          <cast_shadows>0</cast_shadows>
+          <geometry>
+            <plane>
+              <normal>0 0 1</normal>
+              <size>0.6 1.8</size>
+            </plane>
+          </geometry>
+          <material>
+            <script>
+              <uri>model://race_end/materials/scripts</uri>
+              <uri>model://race_end/materials/textures</uri>
+              <name>race_end_mat</name>
+            </script>
+          </material>
+        </visual>
+        <self_collide>0</self_collide>
+        <enable_wind>0</enable_wind>
+        <kinematic>0</kinematic>
+      </link>
+      <pose>0.467186 -1.22987 0 0 -0 0</pose>
+    </model>
+    <model name='race_end_0'>
+      <static>1</static>
+      <link name='link'>
+        <collision name='collision'>
+          <geometry>
+            <plane>
+              <normal>0 0 1</normal>
+              <size>0.6 1.8</size>
+            </plane>
+          </geometry>
+          <surface>
+            <friction>
+              <ode>
+                <mu>100</mu>
+                <mu2>50</mu2>
+              </ode>
+              <torsional>
+                <ode/>
+              </torsional>
+            </friction>
+            <contact>
+              <ode/>
+            </contact>
+            <bounce/>
+          </surface>
+          <max_contacts>10</max_contacts>
+        </collision>
+        <visual name='visual'>
+          <cast_shadows>0</cast_shadows>
+          <geometry>
+            <plane>
+              <normal>0 0 1</normal>
+              <size>0.6 1.8</size>
+            </plane>
+          </geometry>
+          <material>
+            <script>
+              <uri>model://race_end/materials/scripts</uri>
+              <uri>model://race_end/materials/textures</uri>
+              <name>race_end_mat</name>
+            </script>
+          </material>
+        </visual>
+        <self_collide>0</self_collide>
+        <enable_wind>0</enable_wind>
+        <kinematic>0</kinematic>
+      </link>
+      <pose>2.30994 -7.2811 0 0 -0 0</pose>
     </model>
   </world>
 </sdf>
