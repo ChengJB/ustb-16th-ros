@@ -1,0 +1,15 @@
+material race_end_mat
+{
+  technique
+  {
+    pass
+    {
+      texture_unit
+      {
+        texture race_end_texture.png
+        filtering anisotropic
+        max_anisotropy 16
+      }
+    }
+  }
+}
