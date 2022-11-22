@@ -13,6 +13,6 @@
     <include file="$(find ucar_navigation)/launch/amcl.launch" />
 
     <!-- 运行rviz -->
-    <node pkg="rviz" type="rviz" name="rviz" args="-d $(find ucar_navigation)/rviz/nav.rviz"/>
+    <node pkg="rviz" type="rviz" name="rviz" args="-d $(find ucar_navigation)/rviz/nav.rviz" output="screen" />
 
 </launch>
