@@ -5,7 +5,7 @@
 ## 导入gazebo模型
 
 为使得二维码与停车点标记正常显示, 需要先将其模型导入  
-将本仓库的models文件夹中的内容加入`.gazebo/models`  
+将本仓库的models文件夹中的内容加入`~/.gazebo/models`  
 使得其文件目录如下
 
 ```txt
