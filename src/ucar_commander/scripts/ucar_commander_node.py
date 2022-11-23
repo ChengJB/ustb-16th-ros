@@ -11,7 +11,7 @@ import actionlib
 import os
 import tf
 from geometry_msgs.msg import PoseStamped, Point32, PolygonStamped
-from nav_msgs.msg import Path
+from nav_msgs.msg import Path, Odometry
 from move_base_msgs.msg import MoveBaseAction, MoveBaseGoal
 from actionlib_msgs.msg import GoalID
 from std_msgs.msg import Int8
@@ -47,6 +47,7 @@ class UcarCommander(object):
         self.is_nav_start = False  # will be fliped to true, when service get called
         self.nav_stage = NavStage.IDLE
         self.position = Point32()
+        self.vel = 0.0
         self.global_frame_id = "map"
         self.robot_frame_id = "base_link"
 
@@ -60,7 +61,7 @@ class UcarCommander(object):
 
         self.scan_goal.target_pose.header.frame_id = self.global_frame_id
         self.scan_goal.target_pose.pose.position.x = 2.867
-        self.scan_goal.target_pose.pose.position.y = -3.612
+        self.scan_goal.target_pose.pose.position.y = -3.212
         self.scan_goal.target_pose.pose.position.z = 0
         self.scan_goal.target_pose.pose.orientation.x = 0.000
         self.scan_goal.target_pose.pose.orientation.y = 0.000
@@ -77,7 +78,7 @@ class UcarCommander(object):
         park_1.target_pose.pose.orientation.w = 0.719
 
         park_2.target_pose.header.frame_id = self.global_frame_id
-        park_2.target_pose.pose.position.x = -0.128
+        park_2.target_pose.pose.position.x = 0.428
         park_2.target_pose.pose.position.y = -1.408
         park_2.target_pose.pose.position.z = 0
         park_2.target_pose.pose.orientation.x = 0.000
