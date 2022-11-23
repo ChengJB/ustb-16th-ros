@@ -1,0 +1,5 @@
+<launch>
+    <node name="qr_node" pkg="qr" type="qr_node" output="screen">
+    </node>
+
+</launch>

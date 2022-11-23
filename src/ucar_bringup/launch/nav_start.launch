@@ -23,6 +23,6 @@
     <!-- ##       DECISION & LOGIC           ## -->
     <!-- ###################################### -->
 
-    <!-- not used -->
+    <include file="$(find ucar_commander)/launch/ucar_commander.launch" />
 
 </launch>

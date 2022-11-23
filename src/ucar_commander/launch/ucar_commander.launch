@@ -1,0 +1,10 @@
+<launch>
+     <include file="$(find qr)/launch/qr.launch" />
+
+    <node name="ucar_commander_node" pkg="ucar_commander" type="ucar_commander_node.py" output="screen">
+        <rosparam file="$(find ucar_commander)/config/ucar_commander.yaml" command="load" />
+    </node>
+
+
+
+</launch>
