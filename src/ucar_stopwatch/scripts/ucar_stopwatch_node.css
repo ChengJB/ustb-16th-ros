@@ -71,8 +71,30 @@ Button {
 
 
 #config_panel {
+    layout: horizontal;
+    width: 80;
     height: 8;
     margin-left: 2;
+}
+
+#config_left {
+    dock: left;
+    content-align: left middle;
+}
+
+#config_right {
+    dock: right;
+    content-align: right middle;
+    margin-left: 47;
+    margin-top: 2;
+}
+
+#md5sum {
+    width: 28;
+}
+
+#dump {
+    width: 28;
 }
 
 .configure {

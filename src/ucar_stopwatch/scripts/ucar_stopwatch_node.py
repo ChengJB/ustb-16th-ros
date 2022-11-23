@@ -6,6 +6,7 @@ import rospy
 import tf
 import os
 import math
+import hashlib
 from std_srvs.srv import SetBool
 from nav_msgs.msg import Odometry
 from geometry_msgs.msg import PoseStamped, Point32, PolygonStamped
@@ -348,7 +349,8 @@ class StopwatchApp(App):
     CSS_PATH = os.path.join(
         node.package_path, "scripts/ucar_stopwatch_node.css")
 
-    BINDINGS = [("d", "toggle_dark", "Toggle dark mode"),
+    BINDINGS = [("space", "start_timer", "Start Timer"),
+                ("d", "toggle_dark", "Toggle dark mode"),
                 ("q", "exit", "Quit Stopwatch")]
 
     def on_button_pressed(self, event: Button.Pressed) -> None:
@@ -397,6 +399,34 @@ class StopwatchApp(App):
             log_disp.new_message(
                 f"Manually stoped, Time: {elapsed:.3f} sec")
             self.remove_class("started")
+
+        elif button_id == "md5sum":
+            file_name = os.path.join(
+                self.node.package_path, '../gazebo_pkg/world/race.world')
+            # Open,close, read file and calculate MD5 on its contents
+            with open(file_name, 'rb') as file_to_check:
+                # read contents of the file
+                data = file_to_check.read()
+                # pipe contents of the file through
+                md5_returned = hashlib.md5(data).hexdigest()
+
+            log_disp = self.query_one(LogDisplay)
+            log_disp.new_message("md5sum world:   " + md5_returned)
+
+            file_name = os.path.join(
+                self.node.package_path, '../mecanum_sim/nexus_4wd_mecanum_description/urdf/nexus_4wd_mecanum.xacro')
+            # Open,close, read file and calculate MD5 on its contents
+            with open(file_name, 'rb') as file_to_check:
+                # read contents of the file
+                data = file_to_check.read()
+                # pipe contents of the file through
+                md5_returned = hashlib.md5(data).hexdigest()
+
+            log_disp.new_message("md5sum urdf:    " + md5_returned)
+
+        elif button_id == "dump":
+            log_disp = self.query_one(LogDisplay)
+            log_disp.new_message("topic and tf dump is not implemented, yet.")
 
     def on_ros_status_parked(self, message: RosStatus.Parked) -> None:
         """ when robot is in park point and velocity is 0"""
@@ -455,16 +485,21 @@ class StopwatchApp(App):
             Container(
                 Static("[b]Configuration:\n", classes="config_title"),
                 Horizontal(
-                    Static("use sim time:       ", classes="label"),
+                    Static("  use sim time:       ", classes="label"),
                     Checkbox(value=True, id="sim_time_check"),
                     classes="configure",
                 ),
                 Horizontal(
-                    Static("send /nav_start:    ", classes="label"),
+                    Static("  send /nav_start:    ", classes="label"),
                     Checkbox(value=True, id="send_start_check"),
                     classes="configure",
                 ),
                 id="config_left"
+            ),
+            Container(
+                Button("verify md5 sum", id="md5sum"),
+                Button("dump topics and tf tree", id="dump"),
+                id="config_right"
             ),
             id="config_panel"
         )
@@ -474,6 +509,29 @@ class StopwatchApp(App):
     def action_toggle_dark(self) -> None:
         """An action to toggle dark mode."""
         self.dark = not self.dark
+
+    def action_start_timer(self) -> None:
+        ros_time_display = self.query_one(RosTimeDisplay)
+        wall_time_display = self.query_one(WallTimeDisplay)
+        log_display = self.query_one(LogDisplay)
+        if self.send_start:
+            (stat, msg) = self.node.commander_start()
+            if self.is_timer_started:
+                pass
+            elif stat:
+                ros_time_display.start()
+                wall_time_display.start()
+                self.add_class("started")
+                log_display.new_message("Nav Start!!")
+                self.is_timer_started = True
+            else:
+                log_display.new_message(f"[warning] {msg} [/warning]")
+        else:
+            ros_time_display.start()
+            wall_time_display.start()
+            self.add_class("started")
+            log_display.new_message("Timer Start!!")
+            self.is_timer_started = True
 
     def action_exit(self) -> None:
         exit(0)
